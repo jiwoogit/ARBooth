@@ -1,6 +1,6 @@
 # Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation
 
-[**Paper (Arxiv)**](https://arxiv.org/abs/2504.02612) / Project Page
+[**Paper (Arxiv)**](https://arxiv.org/abs/2504.02612) / [**Project Page**](https://jiwoogit.github.io/ARBooth)
 
 This is the official PyTorch implementation for the paper "Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation".
 
