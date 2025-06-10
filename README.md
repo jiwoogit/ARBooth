@@ -1,7 +1,5 @@
 # Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation
 
-[**Paper (Arxiv)**](https://arxiv.org/abs/2504.02612) / Project Page
-
 This is the official Project page source for the paper "Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation".
 
 ## Acknowledgements
