@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="ARBooth, personalized auto-regressive model, VAR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="IYymxWwPaxtVlFH8FLH35zgFoZlGsJb2dLcENRc0unw" />
+  <title>Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH1SJVRE8F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NH1SJVRE8F');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <script
+	type="text/javascript"
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"
+  ></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title">Fine-Tuning Visual Autoregressive Models<br>for Subject-Driven Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jiwoogit.github.io">Jiwoo Chung</a>,</span>
+            <span class="author-block">
+              <a href="https://hse1032.github.io/">Sangeek Hyun</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=YWyqklkAAAAJ&hl=en&oi=sra">Hyunjun Kim</a>,</span>
+            <span class="author-block">
+              <a href="https://plan-code.notion.site/My-page-971cf8aa8a42465c844567db9ef57269">Eunseo Koh</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=t20G_eAAAAAJ&hl=en&oi=sra">MinKyu Lee</a>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/jaepilheo">Jae-Pil Heo</a><sup>*</sup></span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Sungkyunkwan University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.09008.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.02612"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/jiwoogit/ARBooth"
+                   class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <img src="./static/images/init_fig.jpg" alt="Main Results">
+            </div>
+          </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-quarter">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified" style="font-size: 1.1rem" >
+          <p>
+            Recent advances in text-to-image generative models have enabled numerous practical applications, including subject-driven generation, which fine-tunes pretrained models to capture subject semantics from only a few examples.
+            While diffusion-based models produce high-quality images, their extensive denoising steps result in significant computational overhead, limiting real-world applicability.
+            Visual autoregressive (VAR) models, which predict next-scale tokens rather than spatially adjacent ones, offer significantly faster inference suitable for practical deployment.
+            <font color="#e0754f"><b>In this paper, we propose the first VAR-based approach for subject-driven generation.</b></font>
+            However, naive fine-tuning VAR leads to computational overhead, language drift, and reduced diversity.
+            To address these challenges, we introduce selective layer tuning to reduce complexity and prior distillation to mitigate language drift.
+            Additionally, we found that the early stages have a greater influence on the generation of subject than the latter stages, which merely synthesize local details.
+            Based on this finding, we propose scale-wise weighted tuning, which prioritizes coarser resolutions for promoting the model to focus on the subject-relevant information instead of local details.
+            Extensive experiments validate that our method significantly outperforms diffusion-based baselines across various metrics and demonstrates its practical usage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-quarter">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+
+          <p><strong>(Left)</strong> Subject-driven fine-tuning. A visual tokenizer encodes each subject image into <em>K</em> multi-scale token maps \((r_{1},\ldots,r_{K})\).  
+          The VAR transformer is fine-tuned to reconstruct these maps \((\hat{r}_{1},\ldots,\hat{r}_{K})\) while updating only the cross-attention (CA) and feed-forward network (FFN) layers.  
+          A scale-weighted cross-entropy loss \(L_{\mathrm{wCE}}\) emphasises coarse scales that capture key subject semantics.</p>
+
+          <p><strong>(Right)</strong> Prior distillation. To mitigate language drift and encourage diversity, token maps generated by the pretrained transformer \(\theta_{\text{orig}}\) from a class-noun prompt \(c_{\text{cls}}\) (e.g., “dog”) serve as soft targets.  
+          A distillation loss \(L_{\text{distill}}\) keeps the fine-tuned model close to the original semantic prior.</p>
+
+          <p><strong>Summary:</strong> <font color="#497c27"><b>CA and FFN layers are optimised jointly with \(L_{\mathrm{wCE}}\) and \(L_{\text{distill}}\), balancing subject fidelity and generative consistency.</b></font></p>
+
+
+          <img src="./static/images/main_fig.jpg" alt="Overview for our method">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body is-four-fifths">
+    <div class="container is-three-quarter">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Qualitative Results</h2>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/proj1.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/proj2.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/proj3.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/proj4.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/proj5.jpg" alt="MY ALT TEXT"/>
+      </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/proj6.jpg" alt="MY ALT TEXT"/>
+   </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/proj7.jpg" alt="MY ALT TEXT"/>
+   </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{chung2025fine,
+  title={Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation},
+  author={Chung, Jiwoo and Hyun, Sangeek and Kim, Hyunjun and Koh, Eunseo and Lee, MinKyu and Heo, Jae-Pil},
+  journal={arXiv preprint arXiv:2504.02612},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+              target="_blank">Academic Project Page Template</a> which was adopted from the <a
+              href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+            <br> This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
