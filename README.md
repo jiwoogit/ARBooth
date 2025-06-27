@@ -1,4 +1,4 @@
-# Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation
+# Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation (ICCV 2025)
 
 [**Paper (Arxiv)**](https://arxiv.org/abs/2504.02612) / [**Project Page**](https://jiwoogit.github.io/ARBooth)
 
