@@ -1,0 +1,23 @@
+easydict
+typed-argument-parser
+seaborn
+kornia
+gputil
+colorama
+omegaconf
+pandas
+timm==0.9.6
+decord
+transformers
+pytz
+pandas
+wandb
+colorama
+imageio
+einops
+openai
+httpx==0.20.0
+opencv-python-headless
+flash_attn
+lpips
+-e git+https://github.com/openai/CLIP.git@main#egg=clip
