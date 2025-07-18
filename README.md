@@ -1,6 +1,9 @@
 # Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation (ICCV 2025)
 
+
 [**Paper (Arxiv)**](https://arxiv.org/abs/2504.02612) / [**Project Page**](https://jiwoogit.github.io/ARBooth)
+
+![ARBooth Main](assets/main.jpg)
 
 This is the official PyTorch implementation for the paper "Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation".
 
@@ -8,7 +11,7 @@ This is the official PyTorch implementation for the paper "Fine-Tuning Visual Au
 
 ## Status Checklist
 
-- [ ] Code & checkpoint upload completed
+- [x] Code & checkpoint upload completed
 - [ ] FlexAttention finetuning option enabled
 - [ ] Infinity-8B checkpoint finetuning enabled
 
@@ -55,6 +58,8 @@ weights/
 ├── infinity_2b_reg.pth
 └── infinity_vae_d32_reg.pth
 ```
+
+**You can download our fine-tuned checkpoints from [Hugging Face (wldn0202/ARBooth)](https://huggingface.co/wldn0202/ARBooth).**
 
 ## Data Preprocessing
 
