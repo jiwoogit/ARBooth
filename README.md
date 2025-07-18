@@ -1,4 +1,4 @@
-# Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation (ICCV 2025)
+# [ICCV 2025] Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation
 
 
 <p align="center">
