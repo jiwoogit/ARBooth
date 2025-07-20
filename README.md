@@ -2,19 +2,12 @@
 
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2504.02612">
-    <img src="https://img.shields.io/badge/ArXiv-2504.02612-b31b1b.svg" alt="arXiv">
-  </a>
-  <a href="https://jiwoogit.github.io/ARBooth">
-    <img src="https://img.shields.io/badge/Project-Page-4b8bbe.svg" alt="Project Page">
-  </a>
-  <a href="https://huggingface.co/wldn0202/ARBooth">
-    <img src="https://img.shields.io/badge/HuggingFace-ARBooth-yellow.svg" alt="Hugging Face">
-  </a>
-  <a href="https://hub.docker.com/repository/docker/wldn0202/arbooth/general">
-    <img src="https://img.shields.io/badge/Docker-ready-blue.svg" alt="Docker">
-  </a>
+  <a href="https://arxiv.org/abs/2504.02612"><img src="https://img.shields.io/badge/ArXiv-2504.02612-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://jiwoogit.github.io/ARBooth"><img src="https://img.shields.io/badge/Project--Page-4b8bbe.svg" alt="Project Page"></a>
+  <a href="https://huggingface.co/wldn0202/ARBooth"><img src="https://img.shields.io/badge/HuggingFace-ARBooth-yellow.svg" alt="Hugging Face"></a>
+  <a href="https://hub.docker.com/repository/docker/wldn0202/arbooth/general"><img src="https://img.shields.io/badge/Docker-ready-blue.svg" alt="Docker"></a>
 </p>
+
 
 ![ARBooth Main](assets/main.jpg)
 
