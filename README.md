@@ -1,4 +1,4 @@
-# [ICCV 2025] Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation
+![ARBooth Logo](assets/logo.png)
 
 
 <p align="center">
@@ -8,10 +8,11 @@
   <a href="https://hub.docker.com/repository/docker/wldn0202/arbooth/general"><img src="https://img.shields.io/badge/Docker-ready-blue.svg" alt="Docker"></a>
 </p>
 
+---
+
+This is the official implementation for the paper "[ICCV 2025] Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation".
 
 ![ARBooth Main](assets/main.jpg)
-
-This is the official PyTorch implementation for the paper "Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation".
 
 ---
 
