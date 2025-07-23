@@ -1,4 +1,4 @@
-![ARBooth Logo](assets/logo.png)
+![ARBooth Title](assets/logo.png "Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation")
 
 
 <p align="center">
