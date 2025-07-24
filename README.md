@@ -12,7 +12,12 @@
 
 This is the official implementation for the paper "[ICCV 2025] Fine-Tuning Visual Autoregressive Models for Subject-Driven Generation".
 
-![ARBooth Main](assets/main.jpg)
+<picture>
+  <source srcset="assets/main_black.png" media="(prefers-color-scheme: dark)">
+  <source srcset="assets/main_white.png" media="(prefers-color-scheme: light)">
+  <img src="assets/main_white.png" alt="ARBooth Main">
+</picture>
+
 
 ---
 
